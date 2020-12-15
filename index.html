@@ -1,67 +1,72 @@
-<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Changa&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Sorting Visualizer</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./css/style.css">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <header>
-            <nav>
-                <div class="array-inputs">
-                    <div class="slider"><p>Size of Array</p>
-                        <input id="a_size" type="range" min="30" max="150" step="1" value="80">
-                    </div>
-                <div class="slider"><p>Visualization Speed</p>
-                    <input type="range" min="1" max="5" step="1" value="4">
-                </div>
-                <button id="a_generate">Generate Array</button>
-                 </div>
-                <div class="header_right">
-                    <p class="nav-heading">Sorting Algorithm Visualizer</p>
+</head>
+<body>
 
-                    <div class="algos">
-                        <button>bubble</button>
-                        <button>Merge</button>
-                        <button>Insertion</button>
-                        <button>Quick</button>
-                        <button>Merge</button>
-                        <button>Heap</button>
-                    </div>
-                </div>
-            </nav>
-        </header>
-        <section>
-                <div id="Info_Cont1">
-                    <p></p>
-                </div>
-                <div id="array_container">
+    
 
-                </div>
+    <section>
 
-                <div id="Info_Cont2">
-                    <p></p>
-                </div>
-        </section>
-        <footer>
+        <div id="Info_Cont1">
+            <p></p>
+        </div>
+
+        <div id="array_container">
             
-        </footer>
+        </div>
 
-        <script src="./scripts/Main.js"></script>
-        <script src="./scripts/visualization.js"></script>
+        <div id="Info_Cont2">
+            <p></p>
+        </div>
 
-        <script src="./scripts/bubbleSort.js" ></script>
-        <script src="./scripts/heapSort.js"></script>
-        <script src="./scripts/insertionSort.js"></script>
-        <script src="./scripts/mergerSort.js"></script>
-        <script src="./scripts/quickSort.js"></script>
-        <script src="./scripts/selectionSort.js"></script>
+    </section>
+    <header>
+        <nav>
+            <div class="array-inputs">
+                <div class="slider"><p>Size of array</p>
+                    <input id="a_size" type="range" min=20 max=150 step=1 value=80>
+                </div>
+                <div class="slider"><p>Visualization Speed</p>
+                    <input id="a_speed" type="range" min=1 max=5 step=1 value=4>
+                </div>
+                <button id="a_generate">Generate Array!</button>
+            </div>
 
-    </body>
+            <div class="header_right">
+                <p class="nav-heading">Sorting Algo visualizer</p>
+
+                <div class="algos">
+                    <button >Bubble</button>
+                    <button >Selection</button>
+                    <button >Insertion</button>
+                    <button >Merge</button>
+                    <button >Quick</button>
+                    <button >Heap</button>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
+    <footer>
+
+    </footer>
+
+    <script src="./scripts/Main.js"></script>   <!--This should be at the end of body and should be loaded before sorts.js-->
+    <script src="./scripts/visualization.js"></script>  <!--This should be loaded after main.js-->
+
+    <script src="./scripts/bubbleSort.js"></script>
+    <script src="./scripts/selectionSort.js"></script>
+    <script src="./scripts/insertionSort.js"></script>
+    <script src="./scripts/mergeSort.js"></script>
+    <script src="./scripts/quickSort.js"></script>
+    <script src="./scripts/heapSort.js"></script>
+</body>
 </html>
